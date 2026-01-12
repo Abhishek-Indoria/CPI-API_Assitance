@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CPI / API Calculator – Reference Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>CPI / API Calculator – Reference Guide</h1>
+
+<p>
+This guide is derived from the <b>CPI Reference Document</b> provided internally.
+It explains how CPI and API are applied in contracts and how the
+<b>CPI / API Calculator</b> should be used to validate pricing.
+</p>
+
+<hr>
+
+<h2>1. CPI and API – As Defined in the CPI Reference Document</h2>
+
+<h3>API (Annual Price Increase)</h3>
+<p>
+API is a contractually defined <b>fixed percentage increase</b>.
+As per the CPI Reference Document, API values are agreed at the time of
+contract signature and remain constant throughout the contract term.
+</p>
+<ul>
+  <li>API percentage does <b>not change year to year</b></li>
+  <li>Increase application depends on the contract anniversary</li>
+  <li>Used when <b>price predictability</b> is required</li>
+</ul>
+
+<h3>CPI (Consumer Price Index)</h3>
+<p>
+CPI is an <b>index-based increase mechanism</b>.
+As stated in the CPI Reference Document, CPI increases are applied based on
+the applicable CPI notification for the relevant period.
+</p>
+<ul>
+  <li>CPI percentage <b>may vary year to year</b></li>
+  <li>CPI requires validation using <b>official CPI notification letters</b></li>
+  <li>CPI is applied only on <b>defined anniversaries</b></li>
+</ul>
+
+<hr>
+
+<h2>2. Increase Types (As Used in the CPI Reference Document)</h2>
+
+<h3>Flat per Annum</h3>
+<p>
+The increase is applied <b>once per contract year</b>, after completion of one
+full year. No increase is applied in the first contract year.
+</p>
+
+<h3>Flat per Term</h3>
+<p>
+The increase is applied <b>only at contract renewal</b>.
+No annual compounding occurs during the running term.
+</p>
+
+<h3>At Renewal</h3>
+<p>
+Increase is applied <b>only when the contract renews</b> and not during the
+active term.
+</p>
+
+<hr>
+
+<h2>3. Contract Types Explained</h2>
+
+<h3>Initial Contract</h3>
+<p>
+For an Initial contract, the CPI Reference Document defines:
+</p>
+<ul>
+  <li>The anniversary is automatically derived from the <b>contract start date</b></li>
+  <li>No anniversary date input is required from the user</li>
+  <li>The first increase is applied <b>only after completing 12 months</b></li>
+</ul>
+
+<p><b>Example:</b></p>
+<ul>
+  <li>Contract Start Date: <b>01-07-2020</b></li>
+  <li>First Anniversary: <b>01-07-2021</b></li>
+  <li>No increase before <b>01-07-2021</b></li>
+</ul>
+
+<h3>Upsell – Co-term</h3>
+<p>
+As per the CPI Reference Document, a <b>co-term upsell</b>:
+</p>
+<ul>
+  <li>Aligns to the <b>parent (initial) contract anniversary</b></li>
+  <li>Does not create a new anniversary</li>
+  <li>May have a <b>stub period</b> before the next anniversary</li>
+</ul>
+
+<p><b>Example:</b></p>
+<ul>
+  <li>Initial Contract Start: <b>01-07-2020</b></li>
+  <li>Upsell Start Date: <b>01-12-2022</b></li>
+  <li>Parent Anniversary: <b>01-07</b></li>
+  <li>Stub Period: <b>01-12-2022 → 30-06-2023</b></li>
+  <li>First increase applied on: <b>01-07-2023</b></li>
+</ul>
+
+<h3>Upsell – Non-co-term</h3>
+<p>
+A <b>non-co-term upsell</b> is treated independently, as defined in the CPI
+Reference Document:
+</p>
+<ul>
+  <li>The upsell has its <b>own lifecycle</b></li>
+  <li>The anniversary is derived from the <b>upsell start date</b></li>
+  <li>Increase applies only after completing <b>12 months</b> from upsell start</li>
+</ul>
+
+<p><b>Example:</b></p>
+<ul>
+  <li>Upsell Start Date: <b>01-02-2023</b></li>
+  <li>First Anniversary: <b>01-02-2024</b></li>
+</ul>
+
+<hr>
+
+<h2>4. How to Use the CPI / API Calculator</h2>
+
+<ol>
+  <li>Select <b>Contract Nature</b> (Initial or Upsell)</li>
+  <li>If Upsell, select <b>Co-term or Non-co-term</b></li>
+  <li>Enter the <b>Initial Contract Start Date</b></li>
+  <li>Enter the <b>Upsell Start Date</b> (only for upsell)</li>
+  <li>Select <b>CPI or API</b> and the applicable increase type</li>
+  <li>Enter <b>Base Annual Price</b> and <b>Increase Percentage</b></li>
+  <li>Validate the calculated value against <b>ISP</b></li>
+</ol>
+
+<hr>
+
+<h2>5. CPI Notification Letters</h2>
+
+<p>
+CPI values must be validated using the official CPI notification letters:
+</p>
+<ul>
+  <li>
+    <a href="https://icp.hec.net.sap/sap/bc/webdynpro/sap/zyb1_cpi_noti#"
+       target="_blank">
+      CPI Notification – PC
+    </a>
+  </li>
+  <li>
+    <a href="https://icp.hec.net.sap/sap/bc/webdynpro/sap/zzk_cpi_noti#"
+       target="_blank">
+      CPI Notification – VB
+    </a>
+  </li>
+</ul>
+
+<p>
+This guide must be used together with the <b>CPI Reference Document</b>.
+In case of conflict, the CPI Reference Document takes precedence.
+</p>
+
+<hr>
+
+<div style="margin-top:30px;">
+  <a href="index.html">
+    ⬅ Go to CPI / API Calculator
+  </a>
+</div>
+
+<p style="margin-top:40px;font-size:14px;color:#555;">
+  Created by <b>Abhishek Indoria</b><br>
+  If you face any challenges, please contact via <b>Microsoft Teams</b>.
+</p>
+
+</body>
+</html>

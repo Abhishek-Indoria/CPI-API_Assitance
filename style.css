@@ -1,0 +1,117 @@
+/* Base */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 40px 24px; /* ✅ TOP + LEFT/RIGHT SPACE ADDED */
+  color: #1f2933;
+}
+
+/* Main container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* Navigation */
+.top-nav {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #143a5b;
+}
+
+/* Headings */
+h1 {
+  color: #143a5b;
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #143a5b;
+  margin-bottom: 15px;
+}
+
+/* Sections */
+.section {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.sub-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #ccc;
+}
+
+/* Form */
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button */
+.primary-btn {
+  margin-top: 20px;
+  padding: 10px 24px;
+  background: #143a5b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.primary-btn:hover {
+  background: #0f2f4a;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #d1d5db;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: #143a5b;
+  color: white;
+}
+
+/* ISP Result */
+.isp-result {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #555;
+}
