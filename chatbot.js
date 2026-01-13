@@ -109,7 +109,7 @@ function calculate() {
     } else {
       ispDiv.style.color = "red";
       ispDiv.innerText =
-        `⚠ ISP Mismatch: Calculated = ${totalCalculatedISP.toFixed(2)}, Expected = ${expectedISP.toFixed(2)}`;
+        `⚠ ISP Mismatch: Calculated = ${totalCalculatedISP.toFixed(2)}, Suggested = ${expectedISP.toFixed(2)}`;
     }
   }
 }
